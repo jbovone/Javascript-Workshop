@@ -102,3 +102,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+# JS Code from other people
+Code_from_buddys_for_learning_purposes.js
