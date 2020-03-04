@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+  <div class="line">
+    <div class="box">
+      <div class="glass"></div>
+      <div class="content">
+        <h1>Glowing!</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt numquam et maxime maiores vel
+          doloremque
+          facere consequuntur? Impedit distinctio omnis deserunt debitis veniam voluptatem, quod, ut obcaecati
+          provident deleniti ratione maiores. Natus voluptatem odio, accusantium hic at repellendus incidunt
+          nostrum,
+          perspiciatis placeat id nemo labore adipisci autem quas fugiat quam!</p>
+      </div>
+    </div>
+    <div class="box">
+      <div class="glass"></div>
+      <div class="content">
+        <h1>Glowing!</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt numquam et maxime maiores vel
+          doloremque
+          facere consequuntur? Impedit distinctio omnis deserunt debitis veniam voluptatem, quod, ut obcaecati
+          provident deleniti ratione maiores. Natus voluptatem odio, accusantium hic at repellendus incidunt
+          nostrum,
+          perspiciatis placeat id nemo labore adipisci autem quas fugiat quam!</p>
+      </div>
+    </div>
+    <div class="box">
+      <div class="glass"></div>
+      <div class="content">
+        <h1>Glowing!</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt numquam et maxime maiores vel
+          doloremque
+          facere consequuntur? Impedit distinctio omnis deserunt debitis veniam voluptatem, quod, ut obcaecati
+          provident deleniti ratione maiores. Natus voluptatem odio, accusantium hic at repellendus incidunt
+          nostrum,
+          perspiciatis placeat id nemo labore adipisci autem quas fugiat quam!</p>
+      </div>
+    </div>
+  </div>
+  <div id="mi-glowing-balloon"></div>
+  <div id="marble"></div> -->
+</body>
+
+</html>
+
+<Style>
+  .box {
+    display: flex;
+    position: relative;
+    height: 400px;
+    width: 300px;
+    justify-items: center;
+    align-items: center;
+    background-color: #060c21;
+    margin: 40px;
+  }
+
+  .box::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    background-color: #fff;
+    z-index: -1;
+  }
+
+  .box::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    background-color: #fff;
+    z-index: -2;
+    filter: blur(40px);
+  }
+
+  .box .content {
+    padding: 20px;
+    color: #fff;
+  }
+
+  .box:nth-child(1)::before,
+  .box:nth-child(1)::after {
+    background-color: linear-gradient(235deg, #89ff00, #010615, #00bcd4);
+  }
+
+  .box:nth-child(2)::before,
+  .box:nth-child(2)::after {
+    background-color: linear-gradient(235deg, #ff005e, #010615, #fbff00);
+  }
+
+  .box:nth-child(3)::before,
+  .box:nth-child(3)::after {
+    background-color: linear-gradient(235deg, #772aff, #010615, #2196f3);
+  }
+
+  .box .glass {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+  }
+
+  .line {
+    display: flex;
+    flex-direction: row;
+  }
+
+</Style>
